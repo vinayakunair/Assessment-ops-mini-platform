@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Database
+app.db
+
+# Node / React
+assessment-frontend/node_modules/
+assessment-frontend/dist/
+
+# OS junk
+.DS_Store
+Thumbs.db
