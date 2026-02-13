@@ -231,21 +231,6 @@ def list_attempts(limit: int = 50):
     ]
 
 
-# @app.get("/api/debug/scores")
-# def debug_scores():
-#     db = SessionLocal()
-#     count = db.query(AttemptScore).count()
-#     db.close()
-#     return {"scores_count": count}
-
-
-# @app.get("/api/debug/tests")
-# def debug_tests():
-#     db = SessionLocal()
-#     rows = db.query(Attempt.test).limit(10).all()
-#     db.close()
-
-#     return [row[0] for row in rows if row and row[0]]
 
 
 
