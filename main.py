@@ -273,7 +273,7 @@ def leaderboard(test_name: str):
         .join(AttemptScore, AttemptScore.attempt_id == Attempt.id)
         .filter(
             Attempt.status == "SCORED",
-            Attempt.duplicate_of_attempt_id == None
+            Attempt.duplicate_of_attempt_id == None 
         )
         .all()
     )
@@ -284,8 +284,9 @@ def leaderboard(test_name: str):
         if not attempt.test:
             continue
 
-        if attempt.test.get("name") != test_name:
-            continue
+        if test_name.lower() not in attempt.test.get("name", "").lower():
+            continue 
+
 
         key = attempt.student.get("email_normalized") or attempt.student.get("phone_normalized")
         if not key:

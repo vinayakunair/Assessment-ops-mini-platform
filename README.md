@@ -20,7 +20,7 @@ pip install fastapi uvicorn sqlalchemy
 ```bash
 uvicorn main:app --reload
 ```
-Here’s a clean, short **README section for running your frontend** (copy–paste friendly 👇):
+
 
 ---
 
@@ -59,6 +59,8 @@ http://localhost:5173
 Then restart terminal and run:
 
 ```bash
+(goto cd assessment-frontend )
+
 npm run dev
 ```
 
